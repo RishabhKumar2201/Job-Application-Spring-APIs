@@ -16,6 +16,14 @@ public class Company {
     private String name;
     private String description;
 
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
     @JsonIgnore
     @OneToMany(mappedBy = "company") //one company can have many jobs openings
     private List<Job> jobs;
