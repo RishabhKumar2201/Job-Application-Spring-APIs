@@ -1,5 +1,6 @@
 package com.example.demo.job;
 
+import com.example.demo.company.Company;
 import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
@@ -14,6 +15,17 @@ public class Job {
     private String minSalary;
     private String maxSalary;
     private String location;
+
+    @ManyToOne //many jobs are linked to one particular company
+    private Company company;
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
 
     public Job(){} //Default constructor is mandatory
 
