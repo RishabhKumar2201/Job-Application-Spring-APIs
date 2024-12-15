@@ -1,6 +1,7 @@
 package com.example.demo.job;
 
 import com.example.demo.company.Company;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
